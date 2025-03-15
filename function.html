@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="title" onclick="showalert()">Hello world!!!</h1>
+
+
+    <h2 id="heading">This is Heading!!!</h2>
+
+    <button type="button" onclick="clicktohide()">Click to hide the heading</button>
+    <button type="button" onclick="clicktoshow()">Click to show the heading</button>
+    <script>
+      ///A JavaScript function is a block of code designed to perform a particular task.
+      // A JavaScript function is executed when "something" invokes it (calls it).
+
+      function sum(a,b){ ///function parameter in brackets
+         return a * b;
+      }
+
+      const totalsum = sum(10,50); ///function arguments in brackets
+
+      console.log(totalsum);
+
+              ///show alert
+
+      function showalert(){
+
+        alert("you clicked on the heading")
+
+      }
+
+      // showalert()
+
+      //click to hide the heading
+
+      function clicktohide(){
+        document.getElementById("heading").style.display="none";
+
+      }
+      function clicktoshow(){
+        document.getElementById("heading").style.display="block";
+
+      }
+
+
+
+      let   x=2;{
+        // console.log(x)
+      }
+      console.log(x)
+
+     
+
+      let annu="vineet";
+      console.log(typeof annu + "    " + annu)
+
+
+
+
+      let vineet;
+      console.log(typeof vineet + "    " + vineet)
+
+      ///big int
+      let account_balance= BigInt(12345678966215426554);
+      console.log(typeof account_balance + "  " +account_balance);
+
+     // new object
+      const student_data=new Object();
+      student_data.name="vineet";
+      student_data.age=21;
+      console.log(student_data.name)
+      console.log(student_data.age)
+
+
+
+      //array
+
+      const colors=["red","blue","green"];
+      console.log(colors)
+      
+
+      ///Date object
+
+      const date= new Date().getFullYear();
+
+      console.log(typeof date+"   "+ date)
+
+
+      const car_details={car_name:"Fortuner",car_age:2,car_brand:"toyata"};
+      console.log(car_details)
+
+
+
+      function tocelcius(fah){
+        return(5/9)*(fah-32)
+      }
+
+      let finaloutput= tocelcius(51)
+      console.log(finaloutput)
+
+
+      function fetchdata(callback){
+        setTimeout(() => {
+          document.write("Data is in processing......")
+          callback();
+          
+        }, 20000);
+
+      }
+
+      function processdata(){
+        document.write("Data print successfully...")
+      }
+
+      fetchdata(processdata);
+
+
+
+      function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet("Alice")); // Output: Hello, Alice!
+
+
+
+
+
+      
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .menu-items{
+        list-style-type: none;
+        display: inline-block;
+        border: 1px solid;
+        padding: 10px;
+        cursor: pointer;
+
+      }
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <li class="menu-items" data-page="Home">Home</li>
+        <li class="menu-items" data-page="About">About</li>
+        <li class="menu-items" data-page="Contact">Contact</li>
+        
+        
+     </div>
+     <div class="container">
+        <h1>Welcome to TGC Multimedia And Animation.....</h1>
+        <h2 id="updated-content">This Is Our Home Page.....</h2>
+     </div>
+
+
+    <script>
+
+      const menuitems= document.querySelectorAll(".menu-items");
+      const updatedtext = document.getElementById("updated-content");
+
+      const data= {
+        Home : "This is our Home page...",
+        About : "This is our About page...",
+        Contact : "This is our Contact page..."
+      }
+
+
+      //using evvent listner to menu items////
+
+        menuitems.forEach(items =>{
+          items.addEventListener('click' ,()=>{
+            const pages = items.getAttribute("data-page");
+            updatedtext.textContent=data[pages]
+
+
+          })
+        })
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="demo"></h1>
+    <div>
+        <img src="" id="image" alt="">
+    </div>
+
+
+    <script>
+        let current_day;
+
+        switch (new Date().getDay()) {
+            case 0:
+                current_day = "sunday";
+                
+                break;
+            case 1:
+                current_day = "Monday";
+                break;
+            case 2:
+                current_day = "Tuesday";
+                break;
+            case 3:
+                current_day = "Wednesday";
+                break;
+            case 4:
+                current_day = "Thrusday";
+                break;
+            case 5:
+                current_day = "Friday";
+                break;
+            case 6:
+                current_day = "Saturday";
+                break;
+            case 7:
+                current_day = "Invalid Day";
+
+        }
+       document.getElementById("demo").innerHTML="Today is" +" "+ current_day;
+
+
+
+       //for loop:
+
+
+       let totalnum="";
+       for(let i = 0;i <= 10;i++){
+        totalnum += "The Number is "+ i + "<br>";
+
+       }
+       document.write(totalnum)
+
+
+       //for in loop//
+       const details={
+        name: "Vineet",
+        last_name:"kumar",
+        age: 22,
+        city:"Delhi"
+
+       }
+       let print_details="  ";
+       for(let i in details ){
+        print_details += details[i]+ "  ";
+       }
+       document.write(print_details);
+
+       //for of loop//
+       let lanuage="javascript";
+       let text=""  + "<br>";
+       for(let x of lanuage){
+        text+= x  + " <br>";
+       }
+       document.write(text)
+
+       //for of loop using array//
+
+       const fruits=["apple","banana","mango"]
+       for(let x of fruits){
+        document.write(x +"  <br>")
+       }
+
+       let name="VINEET";
+       for(let x of name){
+        document.write(x +"<br>")
+       }
+
+       
+
+    </script>
+</body>
+
+</html>

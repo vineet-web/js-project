@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i=1;
+        let doWhiletext="  ";
+       do{
+        doWhiletext += i + "  ";
+        i++;
+       }while(i <=100)
+
+       document.write(doWhiletext + " <br>"  +" print With WHILE LOOP:-")
+
+
+       let j=101;
+       let whiletext= "  ";
+        
+       while(j<=200){
+        whiletext += j + "  ";
+        j++;
+       }
+       document.write(whiletext + "<br>");
+
+       ///FOR LOOP:
+       let number=" ";
+       for(let i=0;i<=20;i++){
+        number += "the number is" +   i +"  ";
+
+
+       }
+       console.log(number)
+       
+
+        //for loop:
+
+
+        let totalnum="";
+       for(let i = 0;i <= 10;i++){
+        totalnum += "The Number is "+ i + "<br>";
+
+       }
+       document.write(totalnum)
+
+
+       //for in loop//
+       const details={
+        name: "Vineet",
+        last_name:"kumar",
+        age: 22,
+        city:"Delhi"
+
+       }
+       let print_details="  ";
+       for(let i in details ){
+        print_details += details[i]+ "  ";
+       }
+       document.write(print_details);
+
+       //for of loop//
+       let lanuage="javascript";
+       let text=""  + "<br>";
+       for(let x of lanuage){
+        text+= x  + " <br>";
+       }
+       document.write(text)
+
+       //for of loop using array//
+
+       const fruits=["apple","banana","mango"]
+       for(let x of fruits){
+        document.write(x +"  <br>")
+       }
+
+       let name="VINEET";
+       for(let x of name){
+        document.write(x +"<br>")
+       }
+       
+
+
+
+
+    </script>
+</body>
+</html>

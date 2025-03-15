@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .container {
+            background: palevioletred;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px white;
+        }
+        h2{
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            background: bisque;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+
+        button {
+            border: none;
+            background: blueviolet;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: plum;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>To-Do List :-</h2>
+        <input type="text" id="Input" placeholder="Write here to Add a task">
+        <button onclick="addTask()">Add</button>
+        <ul id="List"></ul>
+    </div>
+
+    <script>
+
+
+        document.getElementById("Input").addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
+           
+        });
+       
+        
+        function addTask() {
+            let taskInput = document.getElementById("Input");
+            let taskValue = taskInput.value.trim();
+            if (taskValue === "") return;
+
+            let li = document.createElement("li");
+            li.innerHTML = `${taskValue} <button onclick="removeTask(this)">Delete</button>`;
+            document.getElementById("List").appendChild(li);
+
+            taskInput.value = "";
+        }
+
+        function removeTask(button) {
+            button.parentElement.remove();
+        }
+
+        
+        
+    </script>
+</body>
+
+</html>

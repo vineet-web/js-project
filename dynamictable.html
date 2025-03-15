@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,th{
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dynamic table using Java script:</h1>
+    <div id="table-container">
+
+    </div>
+
+    <script>
+        const tablecontainer=document.getElementById("table-container");
+        const tabledata=[
+            {
+                name: "Vineet", age: 22 , city:"Delhi" ,course:"Full stack"
+            }, {
+                name: "Chirag", age: 22 , city:"Delhi" ,course:"UI/UX"
+            },{
+                name: "Dhruv", age: 21 , city:"Delhi" ,course:"Full stack"
+            },{
+                name: "Zaheer", age: 21 , city:"Delhi",course:"Web design"
+            },{
+                name: "Kaushlesh", age: 22 , city:"Delhi" ,course:"Digital marketing"
+            },
+           
+        ]
+
+
+        //craete table tag
+
+        let tableHTMLadd=" <table>";
+            tableHTMLadd +="<tr> <th> Name </th>  <th> Age </th> <th> City </th> <th> Course </th> </tr>";
+            tabledata.forEach(rows => {
+                tableHTMLadd += `<tr> <th> ${rows.name} </th>  <th> ${rows.age} </th> <th> ${rows.city} </th> <th> ${rows.course} </th> </tr>`
+                
+            });
+
+            tableHTMLadd +="</table>";
+
+            tablecontainer.innerHTML=tableHTMLadd;
+        
+    </script>
+</body>
+</html>

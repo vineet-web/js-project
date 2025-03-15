@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading"> </h1>
+    <button type="button" onclick="myfunction()">click me!!</button>
+
+    <script>
+        //let value = await promise;
+
+        async function myfunction(){
+         //promise
+
+         const promise= new Promise ((resolve) =>{
+            setTimeout(() => {
+                resolve("Hello")
+                
+            }, 3000);
+         })
+
+         document.getElementById('heading').innerHTML= await promise;
+
+
+
+        }
+        
+
+        ///mapping :
+         
+
+        const arr1=[100,200,300,400,500];
+        const newarr1= arr1.map((num)=> num*3)
+
+        console.log(newarr1)
+
+
+        const arr2=[100,200,300,400,500];
+        const newarr2= arr2.map((num)=> num+3)
+
+        console.log(newarr2)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //promise.all():-
+
+        const promise1 = Promise.resolve(10);
+        const promise2 = Promise.resolve(20);
+
+        Promise.all([promise1, promise2])
+            .then((result) => {
+                console.log("All promises are fullfilled and the value is:" + result)
+            })
+
+        //promise.allsettled():this method is wait for all the promises to be resolved or settled 
+        //and return an array...
+
+        const Promise1 = Promise.resolve('Success')
+        const Promise2 = Promise.reject('Error')
+        const Promise3 = Promise.resolve('Done')
+
+        Promise.allSettled([Promise1, Promise2, Promise3])
+            .then(results => console.log(results)
+            )
+
+
+        ///promise.race():-this method is wait for anybof the promises to be setteled or return any promise.
+
+        const promise4 = new Promise(resolve => setTimeout(resolve, 500, 'first'));
+        const promise5 = new Promise(resolve => setTimeout(resolve, 200, 'second'));
+        const promise6 = new Promise(resolve => setTimeout(resolve, 100, 'third'));
+
+
+        Promise.race([promise4, promise5, promise6])
+            .then(value => console.log(value)
+            )
+
+        ///promise.race
+
+        const promise7 = new Promise(function (resolve) {
+            setTimeout(resolve, 500, 'hello')
+        })
+        const promise8 = new Promise(function (resolve) {
+            setTimeout(resolve, 200, 'world')
+        })
+        Promise.race([promise7, promise8])
+            .then(results => console.log(results)
+            )
+
+
+
+        ///promise.catch():- the catch() method is used to handle promises rejections ,it runs 
+        //when promise is rejected
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

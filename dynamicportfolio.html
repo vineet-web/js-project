@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        li {
+            cursor: pointer;
+        }
+        li:hover{
+            background-color:palevioletred;
+            color: black;
+    
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-d fluid bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="bg-white">
+                        <div>
+                            <img src="/images/user.png" alt="" width="300px" class="d-block m-auto">
+                            <div class="text-center">
+                                <h2>Vineet Kumar</h2>
+                                <h5>Full Stack Developer</h5>
+                            </div>
+                            <div class="list-group text-center">
+                                <li class="list-group-item" data-page="Home">Home</li>
+                                <li class="list-group-item" data-page="About">About</li>
+                                <li class="list-group-item" data-page="Portfolio">Portfolio</li>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-8 bg-white">
+                    <div class="bg-white">
+                        <div class="content-change text-center">
+                            <h2 id="heading">Home</h2>
+                            <img src="/images/images (1).png" alt="" width="300px" id="image-change" class="d-block m-auto">
+                            <h3 id="text-change">Vineet Kumar</h3>
+                            <p id="para-change">Hii,,Vineet Kumar is a skilled and dynamic Full Stack Developer with
+                                expertise in both front-end and back-end technologies. With a strong foundation in
+                                languages like HTML, CSS, JavaScript, and modern frameworks such as React and Angular,
+                                Vineet is proficient in creating engaging, user-friendly interfaces. On the back-end, he
+                                is experienced with server-side technologies such as Node.js, Express, and databases
+                                like MongoDB and SQL, enabling him to build scalable and efficient applications.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const menuItems = document.querySelectorAll(".list-group-item");
+        const headingContent = document.getElementById("heading");
+        const imageContent = document.getElementById("image-change");
+        const paraContent = document.getElementById("para-change");
+
+        const data = {
+            Home: {
+                heading: "My Name is Vineet Kumar",
+                image: "/images/user.png",
+                para: "I am a passionate and detail-oriented website developer with a strong foundation in front-end and back-end technologies. Skilled in HTML, CSS, JavaScript, and frameworks like React and Bootstrap, I specialize in creating responsive, user-friendly, and visually appealing websites. With a keen eye for design and a problem-solving mindset, I thrive on turning ideas into functional and dynamic web solutions."
+            },
+
+            About: {
+                heading: "About Me",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSLU5_eUUGBfxfxRd4IquPiEwLbt4E_6RYMw&s",
+                para: "Vineet Kumar is a skilled and dynamic Full Stack Developer with expertise in both front-end and back-end technologies. With a strong foundation in languages like HTML, CSS, JavaScript, and modern frameworks such as React and Angular, Vineet is proficient in creating engaging, user-friendly interfaces. On the back-end, he is experienced with server-side technologies such as Node.js, Express, and databases like MongoDB and SQL, enabling him to build scalable and efficient applications."
+            },
+
+
+            Portfolio: {
+                heading: "About My Portfolio",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSA1zygA3rubv-VK0DrVcQ02Po79kJhXo_A&s",
+                para: "Vineet’s approach to development is solution-oriented, always focusing on creating seamless and intuitive user experiences. His attention to detail and ability to work with cross-functional teams makes him adept at taking projects from concept to deployment. Passionate about continuous learning, Vineet keeps up with the latest trends in technology, ensuring that his skills are always current. Whether working independently or as part of a team, he is committed to delivering high-quality solutions that meet both business and user needs"
+
+
+
+
+            },
+
+        }
+
+        menuItems.forEach(items => {
+            items.addEventListener('click', () => {
+                const pages = items.getAttribute("data-page");
+
+                headingContent.textContent = data[pages].heading;
+                imageContent.src = data[pages].image;
+                paraContent.textContent = data[pages].para;
+            })
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

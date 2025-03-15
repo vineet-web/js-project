@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function fetchdata(callback){
+        setTimeout(() => {
+          console.log("Data is in processing......")
+          callback();
+          
+        }, 20000);
+
+      }
+
+      function processdata(){
+        console.log("Data print successfully...")
+      }
+
+      fetchdata(processdata);
+</script>
+</body>
+</html>
